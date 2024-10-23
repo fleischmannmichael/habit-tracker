@@ -1,0 +1,220 @@
+/* src/components/YearView.css */
+
+@import '../variables.css';
+
+* {
+  box-sizing: border-box;
+}
+
+.year-view {
+  width: 100%;
+  max-width: 1200px; /* Limit the maximum width */
+  margin: 0 auto; /* Center horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.heatmap-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+  text-align: center; /* Center the title */
+}
+
+.month-labels {
+  display: grid;
+  grid-template-columns: repeat(53, 14px);
+  gap: 2px;
+  margin: 10px 0;
+}
+
+.month-name {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--text-light);
+  transition: color 0.3s;
+  position: relative;
+}
+
+.month-name:hover {
+  color: var(--text-color);
+}
+
+.heatmap-container {
+  display: flex;
+}
+
+.days-of-week {
+  display: grid;
+  grid-template-rows: repeat(7, 14px);
+  gap: 2px;
+  margin-right: 5px;
+}
+
+.day-label {
+  font-weight: 600;
+  text-align: right;
+  padding-right: 5px;
+  font-size: 0.7rem;
+  color: var(--text-light);
+}
+
+.week-grid {
+  display: grid;
+  gap: 2px;
+}
+
+.week-column {
+  display: grid;
+  grid-template-rows: repeat(7, 14px);
+  gap: 2px;
+}
+
+.day-cell {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.day-cell:hover {
+  background-color: #ccc;
+}
+
+.day-cell.blocked {
+  background-color: #ff9800;
+}
+
+.current-day {
+  border: 1px solid var(--primary-color);
+}
+
+.background-cell {
+  background-color: transparent;
+  border: none;
+}
+
+.tooltip {
+  position: fixed; /* Changed from absolute */
+  background-color: white;
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  font-size: 12px;
+  box-shadow: var(--box-shadow);
+  z-index: 200;
+  border-radius: 4px;
+  width: 220px;
+}
+
+.tooltip p {
+  margin: 5px 0;
+}
+
+.tooltip .habit-list {
+  margin: 5px 0;
+}
+
+.tooltip .habit-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.tooltip .habit-checkbox input {
+  margin-right: 5px;
+}
+
+.tooltip textarea {
+  width: 100%;
+  resize: vertical;
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+  height: 60px;
+  padding: 4px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.tooltip button {
+  margin-top: 8px;
+  padding: 5px 10px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.tooltip button:hover {
+  background-color: var(--accent-dark);
+}
+
+.month-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background-color: white;
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  box-shadow: var(--box-shadow);
+  z-index: 300;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.month-menu.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.month-menu h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.month-menu button {
+  display: block;
+  margin: 10px auto;
+  padding: 8px 15px;
+  background-color: var(--text-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.month-menu button:hover {
+  background-color: var(--text-light);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 250;
+}

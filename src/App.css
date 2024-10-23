@@ -1,0 +1,53 @@
+/* src/App.css */
+
+@import './variables.css';
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  justify-content: center; /* Center content vertically */
+  padding: 20px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.loading {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-top: 50px;
+}
+
+/* "+" Button at the bottom right corner */
+.manage-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--text-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 36px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manage-button:hover {
+  background-color: var(--text-light);
+}
+
+.manage-button:active {
+  background-color: var(--text-color);
+}

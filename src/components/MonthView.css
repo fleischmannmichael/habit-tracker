@@ -1,0 +1,39 @@
+/* src/css/MonthView.css */
+
+.month-view {
+  padding: 20px;
+}
+
+.month-view button {
+  margin-bottom: 10px;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 days per week */
+  gap: 10px;
+}
+
+.day-card {
+  background-color: #ebedf0;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.day-number {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.habit-checkbox {
+  margin-bottom: 5px;
+}
+
+textarea {
+  width: 95%;
+  height: 50px;
+  margin-top: 5px;
+  resize: none;
+}
