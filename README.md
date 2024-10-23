@@ -1,6 +1,6 @@
 
 # Habit Tracker
-![Screenshot 2024-10-23 at 18 59 58](https://github.com/user-attachments/assets/bd0e40e5-33fc-401f-a6fa-22f751489080)
+![Screenshot 2024-10-23 at 18 59 58](https://github.com/user-attachments/assets/801a1914-a30e-4f62-99da-f692a797f6be)
 
 ## Overview
 
