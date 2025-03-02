@@ -45,7 +45,7 @@ Ensure you have the following installed on your local machine:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/habit-tracker.git
+   git clone https://github.com/fleischmannmichael/habit-tracker.git
    cd habit-tracker
 
 2. Install the required dependencies:
